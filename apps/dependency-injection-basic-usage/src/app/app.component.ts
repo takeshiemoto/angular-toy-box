@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { LoggerService } from './logger.service';
 import { ExperimentalLoggerService } from './experimental-logger.service';
+import { LoggerLegacy } from './logger.legacy';
+import { APP_CONFIG, AppConfig } from './config.token';
 
 @Component({
   selector: 'angular-toy-box-root',
@@ -13,23 +15,33 @@ import { ExperimentalLoggerService } from './experimental-logger.service';
       // ここでuseClassすると新しくExperimentalLoggerServiceのインスタンスが生成される。
       // ExperimentalLoggerServiceは既にrootにprovideされているのでシングルトンではなくなる
       // そこで既存のインスタンスを利用するようにuseExistingを使う
-      useExisting: ExperimentalLoggerService,
+      // useExisting: ExperimentalLoggerService,
+
+      // Note
+      // インジェクションする対象がオブジェクトリテラルお場合はuseValueを利用する
+      // useValue: LoggerLegacy,
+
+      // Note
+      // どのServiceをDIするか決まっていないとき
+      useFactory: (config: AppConfig) => {
+        return config.experimentalEnable
+          ? new ExperimentalLoggerService()
+          : new LoggerService();
+      },
+      deps: [APP_CONFIG],
     },
   ],
 })
 export class AppComponent implements OnInit {
   constructor(
     private loggerService: LoggerService,
-    private experimentalService: ExperimentalLoggerService
+    private experimentalService: ExperimentalLoggerService,
+    @Inject(APP_CONFIG) private config: AppConfig
   ) {}
 
   title = 'dependency-injection-basic-usage';
 
   ngOnInit() {
-    // 同じインスタンスになる！
-    console.log(this.loggerService === this.experimentalService);
-
     this.loggerService.log('Hi!');
-    this.experimentalService.log('Hi!');
   }
 }
