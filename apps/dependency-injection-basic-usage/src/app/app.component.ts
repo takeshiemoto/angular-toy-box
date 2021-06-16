@@ -9,7 +9,11 @@ import { ExperimentalLoggerService } from './experimental-logger.service';
   providers: [
     {
       provide: LoggerService,
-      useExisting: ExperimentalLoggerService, // rootにあるインスタンスを利用する
+      // Note
+      // ここでuseClassすると新しくExperimentalLoggerServiceのインスタンスが生成される。
+      // ExperimentalLoggerServiceは既にrootにprovideされているのでシングルトンではなくなる
+      // そこで既存のインスタンスを利用するようにuseExistingを使う
+      useExisting: ExperimentalLoggerService,
     },
   ],
 })
