@@ -5,7 +5,7 @@ import { LoggerLegacy } from './logger.legacy';
 import { APP_CONFIG, AppConfig } from './config.token';
 
 @Component({
-  selector: 'angular-toy-box-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   providers: [
