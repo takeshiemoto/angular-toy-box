@@ -21,10 +21,6 @@
   "projects": {
     "dependency-injection-basic-usage": {
       "tags": []
-    },
-    "dependency-injection-basic-usage-e2e": {
-      "tags": [],
-      "implicitDependencies": ["dependency-injection-basic-usage"]
     }
   }
 }
