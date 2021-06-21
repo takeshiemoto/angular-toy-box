@@ -6,6 +6,9 @@ import { FeatureModule } from './feature/feature.module';
 import { SampleComponent } from './sample.component';
 import { SubComponent } from './sub.component';
 import { RouterModule, Routes } from '@angular/router';
+import { REPORTERS } from './reporter.token';
+import { BrowserReporterService } from './browser-reporter.service';
+import { EngineReporterService } from './engine-reporter.service';
 
 const routes: Routes = [
   {
@@ -22,7 +25,14 @@ const routes: Routes = [
     FeatureModule.forRoot(),
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: REPORTERS,
+      useExisting: BrowserReporterService,
+      multi: true,
+    },
+    { provide: REPORTERS, useExisting: EngineReporterService, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
