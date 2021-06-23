@@ -16,6 +16,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./lazy1/lazy1.module').then((m) => m.Lazy1Module),
   },
+  {
+    path: 'optional-sandbox',
+    loadChildren: () =>
+      import('./optional-sandbox/optional-sandbox-routing.module').then(
+        (m) => m.OptionalSandboxRoutingModule
+      ),
+  },
 ];
 
 @NgModule({
