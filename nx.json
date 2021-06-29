@@ -22,5 +22,13 @@
     "dependency-injection-basic-usage": {
       "tags": []
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }
