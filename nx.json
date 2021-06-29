@@ -21,6 +21,9 @@
   "projects": {
     "dependency-injection-basic-usage": {
       "tags": []
+    },
+    "tailwind": {
+      "tags": []
     }
   },
   "targetDependencies": {

@@ -41,6 +41,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
     "@nrwl/angular": "12.5.0",
     "rxjs": "~6.6.0",
+    "tailwindcss": "^2.2.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
