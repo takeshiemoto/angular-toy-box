@@ -21,9 +21,6 @@
   "projects": {
     "dependency-injection-basic-usage": {
       "tags": []
-    },
-    "ssr-example": {
-      "tags": []
     }
   }
 }
