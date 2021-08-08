@@ -7,7 +7,7 @@
     ".eslintrc.json": "*"
   },
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "npmScope": "angular-toy-box",
   "tasksRunnerOptions": {
@@ -19,6 +19,9 @@
     }
   },
   "projects": {
+    "change-direction": {
+      "tags": []
+    },
     "dependency-injection-basic-usage": {
       "tags": []
     },

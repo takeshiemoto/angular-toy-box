@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { LoggerService } from './logger.service';
 import { ExperimentalLoggerService } from './experimental-logger.service';
-import { LoggerLegacy } from './logger.legacy';
 import { APP_CONFIG, AppConfig } from './config.token';
 import { SampleLoggerService } from './sample-logger.service';
 
