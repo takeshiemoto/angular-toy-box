@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'change-direction';
+
+  onClick() {
+    console.log('Event');
+  }
 }
