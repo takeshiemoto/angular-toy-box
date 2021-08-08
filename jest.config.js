@@ -1,6 +1,3 @@
-module.exports = {
-  projects: [
-    '<rootDir>/apps/dependency-injection-basic-usage',
-    '<rootDir>/apps/tailwind',
-  ],
-};
+const { getJestProjects } = require('@nrwl/jest');
+
+module.exports = { projects: getJestProjects() };
