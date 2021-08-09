@@ -1,0 +1,25 @@
+<div class="py-2">
+  <ul>
+    <li *ngFor="let user of users$ | async">
+      <cd-user [user]="user"></cd-user>
+    </li>
+  </ul>
+  <div class="py-2">
+    <button
+      class="
+        border border-pink-800
+        bg-pink-800
+        text-white
+        rounded-md
+        px-4
+        py-2
+        transition
+        duration-500
+        hover:bg-pink-900
+      "
+      (click)="updateUsers()"
+    >
+      Update
+    </button>
+  </div>
+</div>

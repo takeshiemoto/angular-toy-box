@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'angular-toy-box-root',
+  selector: 'cd-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

@@ -36,7 +36,7 @@
       "projectType": "application",
       "root": "apps/change-direction",
       "sourceRoot": "apps/change-direction/src",
-      "prefix": "angular-toy-box",
+      "prefix": "cd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

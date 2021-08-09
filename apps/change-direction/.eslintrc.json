@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "angularToyBox",
+            "prefix": "cd",
             "style": "camelCase"
           }
         ],
@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "angular-toy-box",
+            "prefix": "cd",
             "style": "kebab-case"
           }
         ]
